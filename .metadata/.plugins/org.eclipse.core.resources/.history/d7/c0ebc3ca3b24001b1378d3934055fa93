@@ -1,0 +1,88 @@
+package com.exam.model;
+
+public class Admin 
+{
+	 	int adminId;
+	    char adminName;
+	    String adminAdress;
+	    String adminEmail;
+		
+	    public Admin()
+	    {
+			
+		}
+		public Admin(int adminId, char adminName, String adminAdress, String adminEmail) {
+			super();
+			this.adminId = adminId;
+			this.adminName = adminName;
+			this.adminAdress = adminAdress;
+			this.adminEmail = adminEmail;
+		}
+		public int getAdminId() {
+			return adminId;
+		}
+		public void setAdminId(int adminId) {
+			this.adminId = adminId;
+		}
+		public char getAdminName() {
+			return adminName;
+		}
+		public void setAdminName(char adminName) {
+			this.adminName = adminName;
+		}
+		public String getAdminAdress() {
+			return adminAdress;
+		}
+		public void setAdminAdress(String adminAdress) {
+			this.adminAdress = adminAdress;
+		}
+		public String getAdminEmail() {
+			return adminEmail;
+		}
+		public void setAdminEmail(String adminEmail) {
+			this.adminEmail = adminEmail;
+		}
+		@Override
+		public int hashCode() {
+			final int prime = 31;
+			int result = 1;
+			result = prime * result + ((adminAdress == null) ? 0 : adminAdress.hashCode());
+			result = prime * result + ((adminEmail == null) ? 0 : adminEmail.hashCode());
+			result = prime * result + adminId;
+			result = prime * result + adminName;
+			return result;
+		}
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			Admin other = (Admin) obj;
+			if (adminAdress == null) {
+				if (other.adminAdress != null)
+					return false;
+			} else if (!adminAdress.equals(other.adminAdress))
+				return false;
+			if (adminEmail == null) {
+				if (other.adminEmail != null)
+					return false;
+			} else if (!adminEmail.equals(other.adminEmail))
+				return false;
+			if (adminId != other.adminId)
+				return false;
+			if (adminName != other.adminName)
+				return false;
+			return true;
+		}
+		@Override
+		public String toString() {
+			return "Admin [adminId=" + adminId + ", adminName=" + adminName + ", adminAdress=" + adminAdress
+					+ ", adminEmail=" + adminEmail + "]";
+		}
+	    
+	    
+	
+}
